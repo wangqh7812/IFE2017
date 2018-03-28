@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ccca91-3122-4ff7-904a-15655cbbeef2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_1_1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_1_2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_1_2/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1_2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task_1_2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1_2/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/task_1_2/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,6 +48,7 @@
         <option value="F:/Riven/index.html" />
         <option value="$PROJECT_DIR$/task_1_1/index.html" />
         <option value="$PROJECT_DIR$/task_1_2/index.html" />
+        <option value="$PROJECT_DIR$/task_1_2/styles.css" />
       </list>
     </option>
   </component>
@@ -73,6 +71,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -94,7 +93,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,11 +137,12 @@
       <workItem from="1521787506814" duration="1767000" />
       <workItem from="1522109950766" duration="230000" />
       <workItem from="1522110292213" duration="13721000" />
+      <workItem from="1522200465509" duration="4822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15718000" />
+    <option name="totallyTimeSpent" value="20540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -159,10 +158,10 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -180,12 +179,6 @@
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task_1_1/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pic/task_1_1.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://F:/JQ-Practices/ImgMagnification/ImgMagnification_Demo.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -216,12 +209,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task_1_2/styles.css">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task_1_2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="2925">
+          <caret line="117" column="25" lean-forward="true" selection-start-line="116" selection-start-column="50" selection-end-line="117" selection-end-column="25" />
         </state>
       </provider>
     </entry>
