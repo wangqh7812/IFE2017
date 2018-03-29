@@ -4,10 +4,7 @@
 }
 
 body {
-    width: 1000px;
-    margin: 0 auto;
     font-size: 14px;
-    background-color: #8a898a;
 }
 
 li {
@@ -18,18 +15,23 @@ a {
     text-decoration: none;
 }
 
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #dedede;
+}
 /*  头部导航部分  */
 .header {
     width: 100%;
     height: 60px;
-    background-color: #a300ff;
+    background-color: #002eff;
 }
 
 .header h1 {
     float: left;
     line-height: 60px;
     margin-left: 20px;
-    /*margin-top: 12px;*/
+    font-size: 40px;
 }
 
 .header ul {
@@ -38,13 +40,38 @@ a {
 }
 
 .header li {
+    display: block;
     float: left;
-
-    height: 60px;
     line-height: 60px;
 }
 
 .header li a {
-    display: block;
-    widows: ;
+    display: inherit;
+    text-align: center;
+    width: 100px;
+    font-size: 20px;
+}
+
+.header li a:link,.header li a:visited {
+    color: #000000;
+}
+
+.current-page,.header li a:hover,.header li a:active {
+    background-color: #00c4ff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.txt1,.txt2,.txt3,.txt4 {
+    width: 920px;
+    border: 1px solid #000000;
+    margin: 20px auto;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 4px #8a8a8a;
+}
+
+.txt1 h2,.txt1 h3,.txt1 p {
+    margin: 5px 10px;
 }
