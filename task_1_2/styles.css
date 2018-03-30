@@ -20,6 +20,7 @@ a {
     margin: 0 auto;
     background-color: #dedede;
 }
+
 /*  头部导航部分  */
 .header {
     width: 100%;
@@ -52,17 +53,17 @@ a {
     font-size: 20px;
 }
 
-.header li a:link,.header li a:visited {
+.header li a:link, .header li a:visited {
     color: #000000;
 }
 
-.current-page,.header li a:hover,.header li a:active {
+.current-page, .header li a:hover, .header li a:active {
     background-color: #00c4ff;
     font-size: 30px;
     font-weight: bold;
 }
 
-.txt1,.txt2,.txt3,.txt4 {
+.txt1, .txt2, .txt3, .txt4 {
     width: 920px;
     border: 1px solid #000000;
     margin: 20px auto;
@@ -72,6 +73,6 @@ a {
     box-shadow: 3px 3px 4px #8a8a8a;
 }
 
-.txt1 h2,.txt1 h3,.txt1 p {
+.txt1 h2, .txt1 h3, .txt1 p {
     margin: 5px 10px;
 }
