@@ -192,3 +192,165 @@ a {
     left: 70px;
     bottom: 7px;
 }
+/* main主体 top部分结束 */
+
+/* main主体 mid部分开始 */
+.main-mid {
+    width: 892px;
+    margin-top: 30px;
+}
+
+.mid-left {
+    float: left;
+    width: 230px;
+}
+
+.mid-left h2 {
+    font-size: 16px;
+    color: #418c59;
+    font-family: 微软雅黑, serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.mid-left p {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #767777;
+    font-family: 宋体, serif;
+    line-height: 16px;
+}
+
+.mid-center {
+    float: left;
+    margin-left: 20px;
+    width: 210px;
+}
+
+.mid-center h2 {
+    font-size: 16px;
+    color: #d2994f;
+    font-family: 微软雅黑, serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.mid-center p {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #231815;
+    font-family: 微软雅黑, serif;
+    line-height: 16px;
+    opacity: 0.7;
+}
+
+.mid-right {
+    float: left;
+    margin-left: 20px;
+    width: 180px;
+}
+
+.mid-right h2 {
+    font-size: 16px;
+    color: #cc7680;
+    font-family: 微软雅黑, serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.mid-right p:nth-of-type(1) {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #231815;
+    font-family: 微软雅黑, serif;
+    font-style: oblique;
+    line-height: 16px;
+    opacity: 0.7;
+}
+
+.mid-right p:nth-of-type(2) {
+    margin-top: 40px;
+    font-size: 12px;
+    color: #231815;
+    font-family: 微软雅黑, serif;
+    font-style: oblique;
+    line-height: 16px;
+    opacity: 0.7;
+}
+
+.mid-right p:nth-of-type(2) span {
+    color: #cc7680;
+}
+/* main主体 mid部分结束*/
+
+/* main主体 button部分开始*/
+.main-button {
+    width: 892px;
+    margin-top: 50px;
+}
+
+.button-left {
+    float: left;
+    width: 415px;
+}
+
+.left-title {
+    width: 415px;
+    border-bottom: 2px #11456b solid;
+}
+
+.left-title h2 {
+    font-size: 42px;
+    font-family: 黑体, serif;
+    font-weight: bold;
+    color: #11456b;
+    line-height: 51px;
+}
+
+.left-title h2>span {
+    font-size: 72px;
+    font-family: 黑体, serif;
+    font-weight: bold;
+    color: #f5e327;
+    /*transform: skew(-20deg);*/
+    /*使用transform需要设置display为block，所以这里设置为font-style*/
+    font-style: italic;
+    margin-right: 25px;
+}
+
+.left-title h2:nth-of-type(3) {
+    font-size: 33px;
+}
+
+.left-content {
+    margin-top: 20px;
+}
+.left-content p {
+    display: block;
+    font-size: 12px;
+    font-family: 宋体, serif;
+    line-height: 16px;
+    color: #767777;
+}
+
+.left-content p>span {
+    font-size: 70px;
+    font-family: 微软雅黑, serif;
+    color: #f5e327;
+}
+
+.left-content img {
+    width: 177px;
+    height: 308px;
+}
+
+.button-right {
+    float: right;
+    width: 458px;
+}
+
+.button-right .right-top img {
+    width: 458px;
+    height: 275px;
+
+}
