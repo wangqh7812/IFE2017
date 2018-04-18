@@ -7,7 +7,6 @@
 
 body {
     font-size: 12px;
-    /*font-family: ;*/
     background: #eeeeee;
 }
 
@@ -41,7 +40,7 @@ a {
     margin: 0 auto;
 }
 
-/* header顶部导航部分 */
+/* header头部导航部分 */
 
 .header {
     width: 892px;
@@ -81,7 +80,7 @@ a {
     color: #d45d5c;
     font-family: 黑体, serif;
 }
-/* over */
+/* header over */
 
 /* main主体部分*/
 
@@ -192,9 +191,9 @@ a {
     left: 70px;
     bottom: 7px;
 }
-/* main主体 top部分结束 */
+/* main主体 top上部分结束 */
 
-/* main主体 mid部分开始 */
+/* main主体 mid中部分开始 */
 .main-mid {
     width: 892px;
     margin-top: 30px;
@@ -283,7 +282,7 @@ a {
 }
 /* main主体 mid部分结束*/
 
-/* main主体 button部分开始*/
+/* main主体 button下部分开始*/
 .main-button {
     width: 892px;
     margin-top: 50px;
