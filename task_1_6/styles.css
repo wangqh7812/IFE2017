@@ -1,5 +1,6 @@
 /* css初始化 */
 
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +21,7 @@ a {
 
 /* 高大上的浮动清除 */
 .clear-float {
-    zoom: 1;
+    zoom: 1;    /* 为了适配IE7,IE8 */
 }
 
 .clear-float:after{
@@ -40,7 +41,7 @@ a {
     margin: 0 auto;
 }
 
-/* header头部导航部分 */
+/* 头部导航部分 */
 
 .header {
     width: 892px;
@@ -82,29 +83,29 @@ a {
 }
 /* header over */
 
-/* main主体部分*/
+/* 主体页面部分 */
 
 .main {
     width: 892px;
     margin: 0 auto;
 }
+/* 主体页面部分结束 */
 
-
-/* 主体top上部分 */
+/* 主体上部分 */
 .main-top {
     width: 892px;
     height: 301px;
     margin-top: 30px;
 }
 
-.top-left {
+.main-top-left {
     float: left;
     width: 641px;
     height: 301px;
     position: relative;
 }
 
-.top-left .box-green, .top-left .box-red {
+.main-top-left .box-green, .main-top-left .box-red {
     width: 191px;
     height: 301px;
     position: absolute;
@@ -122,19 +123,19 @@ a {
     background: #cf5456;
 }
 
-.top-left .box-img {
+.main-top-left .box-img {
     width: 641px;
     height: 301px;
     position: absolute;
     z-index: 1;
 }
 
-.box-img>img {
+.main-top-left .box-img>img {
     width: 641px;
     height: 301px;
 }
 
-.top-right {
+.main-top-right {
     float: right;
     width: 203px;
     height: 299px;
@@ -142,7 +143,7 @@ a {
     position: relative;
 }
 
-.top-right h2 {
+.main-top-right h2 {
     font-size: 24px;
     font-family: 微软雅黑, serif;
     color: #000000;
@@ -150,21 +151,21 @@ a {
     text-decoration: underline;
 }
 
-.top-right p:nth-of-type(1) {
+.main-top-right p:nth-of-type(1) {
     font-size: 12px;
     font-family: 楷体, serif;
     color: #676767;
     line-height: 10px;
 }
 
-.top-right p:nth-of-type(2) {
+.main-top-right p:nth-of-type(2) {
     font-family: 微软雅黑, serif;
     font-size: 105px;
     color: #75b86b;
     transform: skew(-20deg);
 }
 
-.top-right p:nth-of-type(3) {
+.main-top-right p:nth-of-type(3) {
     width: 70px;
     font-family: 微软雅黑, serif;
     font-size: 48px;
@@ -174,7 +175,7 @@ a {
     bottom: 0;
 }
 
-.top-right p:nth-of-type(4) {
+.main-top-right p:nth-of-type(4) {
     font-family: 微软雅黑, serif;
     font-size: 21px;
     color: #cc8091;
@@ -183,7 +184,7 @@ a {
     bottom: 24px;
 }
 
-.top-right p:nth-of-type(5) {
+.main-top-right p:nth-of-type(5) {
     font-family: 微软雅黑, serif;
     font-size: 12px;
     color: #cc8091;
@@ -191,20 +192,20 @@ a {
     left: 70px;
     bottom: 7px;
 }
-/* main主体 top上部分结束 */
+/* 主体上部分结束 */
 
-/* main主体 mid中部分开始 */
+/* 主体中部分开始 */
 .main-mid {
     width: 892px;
     margin-top: 30px;
 }
 
-.mid-left {
+.main-mid-left {
     float: left;
     width: 230px;
 }
 
-.mid-left h2 {
+.main-mid-left h2 {
     font-size: 16px;
     color: #418c59;
     font-family: 微软雅黑, serif;
@@ -212,7 +213,7 @@ a {
     text-decoration: underline;
 }
 
-.mid-left p {
+.main-mid-left p {
     margin-top: 12px;
     font-size: 12px;
     color: #767777;
@@ -220,13 +221,13 @@ a {
     line-height: 16px;
 }
 
-.mid-center {
+.main-mid-center {
     float: left;
     margin-left: 20px;
     width: 210px;
 }
 
-.mid-center h2 {
+.main-mid-center h2 {
     font-size: 16px;
     color: #d2994f;
     font-family: 微软雅黑, serif;
@@ -234,7 +235,7 @@ a {
     text-decoration: underline;
 }
 
-.mid-center p {
+.main-mid-center p {
     margin-top: 12px;
     font-size: 12px;
     color: #231815;
@@ -243,13 +244,13 @@ a {
     opacity: 0.7;
 }
 
-.mid-right {
+.main-mid-right {
     float: left;
     margin-left: 20px;
     width: 180px;
 }
 
-.mid-right h2 {
+.main-mid-right h2 {
     font-size: 16px;
     color: #cc7680;
     font-family: 微软雅黑, serif;
@@ -257,7 +258,7 @@ a {
     text-decoration: underline;
 }
 
-.mid-right p:nth-of-type(1) {
+.main-mid-right p:nth-of-type(1) {
     margin-top: 12px;
     font-size: 12px;
     color: #231815;
@@ -267,7 +268,7 @@ a {
     opacity: 0.7;
 }
 
-.mid-right p:nth-of-type(2) {
+.main-mid-right p:nth-of-type(2) {
     margin-top: 40px;
     font-size: 12px;
     color: #231815;
@@ -277,28 +278,28 @@ a {
     opacity: 0.7;
 }
 
-.mid-right p:nth-of-type(2) span {
+.main-mid-right p:nth-of-type(2) span {
     color: #cc7680;
 }
-/* main主体 mid部分结束*/
+/* 主体中部分结束*/
 
-/* main主体 button下部分开始*/
+/* 主体下部分开始*/
 .main-button {
     width: 892px;
     margin-top: 50px;
 }
 
-.button-left {
+.main-button-left {
     float: left;
-    width: 415px;
+    width: 416px;
 }
 
-.left-title {
-    width: 415px;
+.button-left-title {
+    width: 416px;
     border-bottom: 2px #11456b solid;
 }
 
-.left-title h2 {
+.button-left-title h2 {
     font-size: 42px;
     font-family: 黑体, serif;
     font-weight: bold;
@@ -306,7 +307,7 @@ a {
     line-height: 51px;
 }
 
-.left-title h2>span {
+.button-left-title h2>span {
     font-size: 72px;
     font-family: 黑体, serif;
     font-weight: bold;
@@ -317,39 +318,144 @@ a {
     margin-right: 25px;
 }
 
-.left-title h2:nth-of-type(3) {
+.button-left-title h2:nth-of-type(3) {
     font-size: 33px;
 }
 
-.left-content {
-    margin-top: 20px;
+.button-left-content {
+    margin-top: 25px;
+    width: 416px;
 }
-.left-content p {
-    display: block;
+.button-left-content p {
     font-size: 12px;
     font-family: 宋体, serif;
     line-height: 16px;
     color: #767777;
 }
 
-.left-content p>span {
+.button-left-content p>span {
+    float: left;
     font-size: 70px;
+    line-height: 70px;  /*如果不设置“前”字就会溢出上边界，和*/
     font-family: 微软雅黑, serif;
     color: #f5e327;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.left-content img {
-    width: 177px;
-    height: 308px;
+.button-left-content img {
+    float: right;
+    width: 167px;
+    height: 290px;
+    margin: 16px 0 10px 15px;   /* 上右下左 */
 }
 
-.button-right {
+.main-button-right {
     float: right;
     width: 458px;
 }
 
-.button-right .right-top img {
+.button-right-top {
+    position: relative;
     width: 458px;
     height: 275px;
+}
 
+.button-right-top-pic {
+    position: absolute;
+    z-index: 1;
+}
+
+.button-right-top-pic img{
+    width: 458px;
+    height: 275px;
+}
+
+.button-right-top-shadow1 {
+    width: 458px;
+    height: 275px;
+    background: #ffffff;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.4;
+}
+
+.button-right-top-shadow2 {
+    width: 458px;
+    height: 61px;
+    bottom: 0;
+    position: absolute;
+    z-index: 3;
+    background: #000000;
+    opacity: 0.3;
+}
+
+.button-right-top-title {
+    width: 270px;
+    height: 44px;
+    position: absolute;
+    bottom: 10px;
+    z-index: 4;
+    left: 38px;
+}
+
+.right-top-title-box {
+    float: left;
+    width: 127px;
+    height: 44px;
+    line-height: 44px;
+    border-left: 3px solid #72b16a;
+}
+
+.right-top-title-box p {
+    color: #ffffff;
+    font-size: 26px;
+    font-family: 微软雅黑, serif;
+    text-align: center;
+}
+
+.right-top-title-content {
+    float: left;
+    width: 140px;
+    height: 44px;
+}
+
+.right-top-title-content p {
+    font-size: 16px;
+    font-family: 微软雅黑, serif;
+    font-style: italic;
+    color: #72b16a;
+    position: absolute;
+    bottom: 5px;
+}
+
+.button-right-button {
+    width: 458px;
+    height: 328px;
+    background: #ececd2;
+    margin-top: 20px;
+
+}
+
+.button-right-button>p {
+    font: italic 21px 黑体, serif;
+    line-height: 45px;
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+
+.button-right-button>p::before {
+    /* CSS3 引入 ::before  是为了将伪类和伪元素区别开来
+       浏览器也接受由CSS 2 引入的 :before 写法 */
+    content: "";    /* 先插入空白元素，再使用CSS画出三角形*/
+    height: 0;
+    border-bottom: 10px  solid #10456b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    /* 原理：下边框线10px，左右边框线5px
+        实际上就是将一个10px大小的正方形从中间分开为两个宽5px高10px的长方形
+        左右设置透明就是将长方形沿对角线分成两个三角形，一半透明，一半不透明
+        组合起来就是一个三角形了*/
+    position: absolute;
 }
