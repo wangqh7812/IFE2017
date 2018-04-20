@@ -434,13 +434,12 @@ a {
     height: 328px;
     background: #ececd2;
     margin-top: 20px;
-
+    position: relative;
 }
 
 .button-right-button>p {
     font: italic 21px 黑体, serif;
     line-height: 45px;
-    position: relative;
     left: 30px;
     top: 30px;
 }
@@ -458,4 +457,26 @@ a {
         左右设置透明就是将长方形沿对角线分成两个三角形，一半透明，一半不透明
         组合起来就是一个三角形了*/
     position: absolute;
+}
+
+.button-right-button-box1 {
+    width: 260px;
+    height: 160px;
+    background: #cf5456;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.button-right-button-box1 span {
+    display: block;
+    width: 78px;
+    height: 86px;
+    border-right: 2px solid #ffffff;
+    position: absolute;
+    top: 50%;
+    margin-top: -43px;
+    font: 86px 微软雅黑, serif;
+    color: #ffffff;
+    text-align: center;
 }
