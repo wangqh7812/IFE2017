@@ -438,8 +438,9 @@ a {
 }
 
 .button-right-button>p {
+    position: relative;
     font: italic 21px 黑体, serif;
-    line-height: 45px;
+    line-height: 40px;
     left: 30px;
     top: 30px;
 }
@@ -457,26 +458,93 @@ a {
         左右设置透明就是将长方形沿对角线分成两个三角形，一半透明，一半不透明
         组合起来就是一个三角形了*/
     position: absolute;
+    left: -11px;
+    top: 12px;
 }
 
 .button-right-button-box1 {
     width: 260px;
     height: 160px;
-    background: #cf5456;
+    background: #d45d5c;
     position: absolute;
     bottom: 0;
     left: 0;
+    color: #ffffff;
 }
 
-.button-right-button-box1 span {
-    display: block;
-    width: 78px;
+.button-right-button-box1 .num1 {
+    width: 70px;
     height: 86px;
-    border-right: 2px solid #ffffff;
     position: absolute;
     top: 50%;
     margin-top: -43px;
-    font: 86px 微软雅黑, serif;
+    font: 86px 微软雅黑 serif;
     color: #ffffff;
     text-align: center;
+}
+
+.button-right-button-box1 .num2 {
+    width: 183px;
+    height: 86px;
+    border-left: 2px solid #ffffff;
+    position: absolute;
+    top: 50%;
+    margin-top: -43px;
+    right: 0;
+    padding-left: 5px;
+}
+
+.button-right-button-box1 .num2 p:nth-of-type(1) {
+    font-size: 21px;
+    font-style: italic;
+}
+
+.button-right-button-box1 .num2 p:nth-of-type(2) {
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: 黑体, serif;
+}
+
+.button-right-button-box2 {
+    width: 176px;
+    height: 140px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
+    font-family: 黑体, serif;
+    font-style:italic;
+    line-height: 16px;
+}
+
+.button-right-button-box2 span {
+    font-size: 72px;
+    color: #d45d5c;
+    font-family: 黑体, serif;
+}
+
+.button-right-button-box2 span:nth-of-type(1) {
+    float: left;
+    margin: 16px 13px -35px -43px;
+    height: 30px;
+}
+
+.button-right-button-box2 span:nth-of-type(2) {
+    float: right;
+    height: 30px;
+    margin: 26px 5px 0 0;
+}
+
+/* footer底部部分开始*/
+.footer {
+    width: 892px;
+    border-top: 1px solid #938e8c;
+    margin: 30px auto 0;
+}
+
+.footer span {
+    float: right;
+    color: #d45d5c;
+    font: 12px 黑体 serif;
 }
