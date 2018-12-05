@@ -7,16 +7,23 @@
 
 </head>
 <body>
-    <label>请输入北京今天空气质量：<input id="aqi-text" type="text"></label>
-    <button id="sub-btn">确认填写</button>
-
+    <label>请输入北京今天空气质量：<input id="aqi-input" type="text" value="请输入"></label>
+    <button id="button">确认填写</button>
 
     <div>
-        您输入的值是：<span id="aqi-content">尚无录入</span>
+        您输入的值是：<span id="aqi-display">尚无录入</span>
     </div>
 
     <script type="text/javascript">
-        
+        window.onload = function () {
+            var oBtn = document.getElementById('button');
+            var oText = document.getElementById('aqi-input');
+            var oDis = document.getElementById('aqi-display');
+
+            oBtn.onclick = function () {
+                oDis.innerHTML = oText.value;
+            }
+        }
     </script>
 </body>
 </html>
