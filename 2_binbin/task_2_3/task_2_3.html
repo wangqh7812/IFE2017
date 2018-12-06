@@ -56,18 +56,17 @@
             return aData;
         }
 
-        console.log(getData());
+        // console.log(getData());
 
         /*
          * sortAqiData
          * 按空气质量从小到大排序
          * 返回一个排序后的数组*/
 /*        function sortAqiData(aData) {
-            var temp;
-            for (var i = 0; i < aData.length-1; i++) {
-                for (var j = 1; j < aData.length; j++) {
-                    if (aData[i][1] > aData[j][1]) {
-                        temp = aData[i];
+            for (var i = 0; i < 6; i++) {
+                for (var j = 0; j < 6; j++) {
+                    if (aData[i][1] >= aData[j][1]) {
+                        var temp = aData[i];
                         aData[i] = aData[j];
                         aData[j] = temp;
                     }
@@ -76,14 +75,14 @@
             return aData;
         }*/
 
-        function sortAqiData() {
+/*        function sortAqiData() {
             data.sort(function(a,b){
                 return a[1]-b[1];
             });
             return data;
-        }
+        }*/
 
-        console.log(sortAqiData());
+        // console.log(sortAqiData());
 
         /**
          * render
