@@ -5,6 +5,34 @@
     <title>基础JavaScript练习（一）</title>
 </head>
 <body>
+    <div id="content" class="content">
+        <ul>
+            <li class="content-list">1</li>
+            <li class="content-list">2</li>
+            <li class="content-list">3</li>
+            <li class="content-list">4</li>
+            <li class="content-list">5</li>
+        </ul>
+    </div>
+    <div id="input" class="input">
+        <label for="input-add">请开始你的表演</label>
+        <input type="text" name="input-add" id="input-add" placeholder="输入要添加进入队列的数字">
+    </div>
+    <div id="control" class="control">
+        <ul>
+            <li class="control-list"><input type="button" id="left-in" value="左侧入"></li>
+            <li class="control-list"><input type="button" id="right-in" value="右侧入"></li>
+            <li class="control-list"><input type="button" id="left-out" value="左侧出"></li>
+            <li class="control-list"><input type="button" id="right-out" value="右侧出"></li>
+        </ul>
+    </div>
 
+    <script type="text/javascript">
+        window.onload = function () {
+            $ = function (id) {
+                return document.getElementById(id);
+            }
+        }
+    </script>
 </body>
 </html>
