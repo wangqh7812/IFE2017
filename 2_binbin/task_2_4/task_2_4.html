@@ -29,8 +29,35 @@
 
     <script type="text/javascript">
         window.onload = function () {
-            $ = function (id) {
-                return document.getElementById(id);
+            var leftIn = document.getElementById('left-in');
+            var rightIn = document.getElementById('right-in');
+            var leftOut = document.getElementById('left-out');
+            var rightOut = document.getElementById('right-out');
+
+            var inputValue = document.getElementById('input-add');
+
+            var oUl = document.getElementById('content').getElementsByTagName('ul');
+            var aLi = document.getElementsByClassName('content-list');
+
+            var contentListLength = aLi.length;
+            
+            leftIn.onclick = function () {
+                var inputContent = Number(inputValue.value);
+
+                if (inputContent != null && typeof(inputContent) == "number" && !isNaN(inputContent)) {
+                    var newLi = document.createElement('li');
+                    newLi.className = "content-list";
+                    newLi.innerHTML = String(inputContent); //直接用inputContent会报错，用toString解决
+                    oUl.insertBefore(newLi,oUl.childNodes[0]);
+                    inputValue.value = "";
+                }
+                else if (isNaN(inputContent)) {
+                    alert("不可以不输入梳子哦！");
+                    inputValue.value = "";
+                }
+                else if (inputContent == null) {
+                    alert("输点啥数字吧");
+                }
             }
         }
     </script>
