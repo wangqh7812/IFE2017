@@ -1,0 +1,48 @@
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 12px "Microsoft YaHei", serif;
+    color: #000000;
+    background-color:#dedede;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none
+}
+
+em {
+    font-style: normal
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    word-wrap: break-word
+}
+
+.clear-fix {
+    *zoom: 1; /*兼容IE6,IE7。因为IE6和7没有一些元素*/
+}
+.clear-fix:after {
+    display: block;
+    content: '';
+    clear: both;
+    height: 0;
+}

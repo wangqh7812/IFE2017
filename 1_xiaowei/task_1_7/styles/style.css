@@ -1,0 +1,414 @@
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+/*头部导航部分开始*/
+.header {
+    width: 100%;
+    height: 57px;
+}
+
+.header-logo {
+    float: left;
+    margin-left: 60px;
+    height: 57px;
+    line-height: 57px;
+}
+
+.header-logo img {
+    width: 31px;
+    height: 31px;
+}
+
+.header-title {
+    float: left;
+    margin-left: 11px;
+    height: 57px;
+    line-height: 57px;
+    font-size: 20px;
+}
+
+.header-login {
+    float: right;
+    height: 57px;
+    line-height: 57px;
+    margin-right: 60px;
+    font-size: 14px;
+    color: #e74f4d;
+    cursor: pointer;
+}
+
+.header-login img {
+    width: 17px;
+    height: 17px;
+    margin-right: 6px;
+    margin-top: -1px;
+}
+
+.header-nav {
+    float: right;
+    margin-right: 11px;
+    height: 57px;
+    line-height: 57px;
+}
+
+.header-nav li {
+    float: left;
+    height: 57px;
+    line-height: 57px;
+    padding: 0 22px;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.header-nav li.active{
+    border-bottom:3px solid #e74f4d;
+}
+
+.header-nav li:hover {
+    color:#e74f4d;
+    border-bottom:3px solid #e74f4d;
+}
+
+.header-nav li:hover a {
+    color:#e74f4d;
+}
+
+.header-nav li a {
+    color: #a1a1a1;
+}
+
+.header-nav li a.active {
+    color: #e74f4d;
+}
+
+/*.header-nav li a:hover {*/
+/*    color: #e74f4d;*/
+/*}*/
+/*头部导航部分结束*/
+
+/*主体开始*/
+.main {
+    width: 100%;
+}
+
+/*<!--part1头部展示广告部分结束-->*/
+/*<!--part2亮点说明部分结束-->*/
+/*<!--part3提问过渡结束-->*/
+/*<!--part4查找部分结束-->*/
+/*<!--part5活动详情部分结束-->*/
+/*<!--part6更多详情部分结束-->*/
+/*<!--part7申请表单部分结束-->*/
+/*<!--part8联系我们部分结束-->*/
+
+/*part1头部展示广告部分*/
+.part1 {
+    width: 100%;
+    height: 690px;
+    background: url(../images/exhibition_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.part1-shadow {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition:all 1s;
+}
+
+.part1-title p:nth-of-type(1) {
+    position: absolute;
+    z-index: 2;
+    font-size: 60px;
+    line-height: 90px;
+    color: #fff;
+    left: 125px;
+    top: 225px;
+}
+
+.part1-title p:nth-of-type(2) {
+    position: absolute;
+    z-index: 2;
+    font-size: 21px;
+    line-height: 37px;
+    color: #fff;
+    left: 125px;
+    top: 340px;
+}
+
+.part1-btn {
+    position: absolute;
+    z-index: 2;
+    width: 330px;
+    height: 65px;
+    line-height: 65px;
+    background: #e74f4d;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    left: 125px;
+    top: 482px;
+    transition:all 1s;
+    cursor: pointer;
+}
+
+.part1-btn:hover {
+    box-shadow:4px 4px 8px #000;
+}
+
+/*part2亮点说明部分*/
+.part2 {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;/*防止子元素的margin的影响*/
+}
+
+.part2-content {
+    width: 93.75%;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;/*同上*/
+}
+
+.part2-content-box {
+    float: left;
+    height: 250px;
+    width: 25%;
+}
+
+.part2-content-box-icon {
+    width: 42px;
+    height: 42px;
+    background: url(../icons/sprite.png) no-repeat;
+    overflow: hidden;
+    margin: 45px auto;
+}
+
+.part2-content-box1-icon{
+    background-position: 0 0;
+}
+.part2-content-box2-icon{
+    background-position: -49px 0;
+}
+.part2-content-box3-icon{
+    background-position: -97px 0;
+}
+.part2-content-box4-icon{
+    background-position: -142px 0;
+}
+
+.part2-content-box-text {
+    line-height: 18px;
+    font-size: 14px;
+    color: #767777;
+    text-align: center;
+    border-right: 1px solid #989899;
+    box-sizing: border-box;
+}
+
+.part2-content-box4 .part2-content-box-text {
+    border: none;
+}
+
+/*part3提问过渡开始*/
+.part3 {
+    width: 100%;
+    height: 360px;
+    background: #ededed;
+    text-align: center;
+}
+
+.part3-icon {
+    margin: 89px auto 29px;
+}
+
+.part3-text {
+    width: 100%;
+    font-size: 49px;
+    color: #a1a1a1;
+}
+
+/*part4查找部分结束*/
+.part4 {
+    width: 100%;
+    height: 340px;
+    color: #fff;
+    text-align: center;
+    background: url(../images/seek_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.8;
+    transition: opacity 1s;
+    overflow: hidden;
+}
+
+.part4-title {
+    margin-top: 53px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.part4-underline {
+    width:200px;
+    height:3px;
+    margin: 10px auto 0;
+    background-color:#fff;
+    transition:width 1s;
+}
+
+.part4-text {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.part4:hover {
+    opacity: 1;
+}
+
+.part4:hover .part4-underline {
+    width: 30px;
+}
+
+.part4-select {
+    height: 37px;
+    margin: 52px auto 0;
+}
+
+.part4-select-countries {
+    display: inline-block;
+    position:relative;
+}
+
+.part4-select-cities, .part4-select-provinces, .part4-select-search-btn {
+    display: inline-block;
+    position:relative;
+    margin-left: 28px;
+}
+
+.provinces, .countries, .cities {
+    width: 234px;
+    height: 37px;
+    color: #a1a1a1;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border 0.5s;
+    appearance: none;
+}
+
+.part4-select-search-btn {
+    width: 234px;
+    height: 37px;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    background-color: #be4f48;
+    cursor: pointer;
+}
+
+img.select-down{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 9px;
+    right: 5px;
+}
+
+.provinces:hover, .countries:hover, .cities:hover{
+    border: 1px solid #be4f48;
+}
+
+.provinces section:hover, .countries section:hover, .cities section:hover{
+    color: #b7b6b6;
+    background-color: #be4f48;
+}
+
+/*part5活动详情部分开始*/
+.part5 {
+    width: 100%;
+    height: 605px;
+    overflow: hidden;
+}
+
+.part5-boxes {
+    margin: 100px auto 0;
+    width: 93.75%;
+    height: 388px;
+}
+
+.part5-box {
+    float: left;
+    position:relative;
+    width: 25%;
+    height: 388px;
+}
+
+.part5-box-pic {
+    width: 219px;
+    height: 336px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    transition: top 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.part5-box-text {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:37px;
+    text-align:center;
+    transition:bottom 0.5s;
+}
+
+.part5-box-text h2 {
+    margin-bottom:4px;
+    font-size:14px;
+    transition:all 1s;
+}
+
+.part5-box-text p {
+    font-size:12px;
+    color:#a1a1a1;
+}
+
+.part5-box:hover .part5-box-pic{
+    top: 62px;
+}
+
+.part5-box:hover .part5-box-text {
+    bottom: 350px;
+}
+
+.part5-box:hover .part5-box-text h2 {
+    margin-left:25px;
+    font-size:19px;
+    letter-spacing:25px;
+}
+
+/*part6更多详情部分开始*/
+.part6 {
+    width:100%;
+    height:1087px;
+    overflow: hidden;
+}
+
+.part6-top {
+    width:100%;
+    height:566px;
+}
+
+
+
