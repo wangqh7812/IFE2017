@@ -7,6 +7,13 @@ label 元素不会向用户呈现任何特殊的样式。不过，它为鼠标�
 ## 关于insertBefore
 * 父节点一定要确定
 * 像这样是不行的
+
     document.getElementsByTagName('ul')
 * 得这样才可以
+
     document.getElementsByTagName('ul')[0]
+    
+##js test()方法
+test() 方法用于检测一个字符串是否匹配某个模式.
+
+如果字符串中有匹配的值返回 true ，否则返回 false。

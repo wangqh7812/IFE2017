@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础JavaScript练习（三）</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 960px;
+            height: 540px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .content-list {
+            float: left;
+            width: 100%;
+            height: 20px;
+            margin-top: 10px;
+        }
+
+        .content-list li {
+            float: left;
+            list-style: none;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            margin-left: 10px;
+            padding: 0 10px;
+            border: #000000 solid 1px;
+            box-sizing: border-box;
+        }
+
+        .input-area {
+            float: left;
+            width: 100%;
+            height: 30px;
+            margin-top: 20px;
+        }
+
+        .search-area {
+            float: left;
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .input-btn label {
+            margin-left: 10px;
+        }
+
+        .control-btn {
+            float: left;
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .control-btn input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul id="content" class="content-list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <div class="input-area">
+            <label for="input-text">
+                请开始你的表演：<input type="text" name="input-text" id="input-text" placeholder="输入要添加进入队列的数字">
+            </label>
+        </div>
+        <div class="search-area">
+            <label for="search">
+                输入要查询的字段：<input type="text" name="search-text" id="search" placeholder="查询字段">
+            </label>
+        </div>
+        <div id="control" class="control-btn">
+            <input type="button" id="left-in" value="左侧入">
+            <input type="button" id="right-in" value="右侧入">
+            <input type="button" id="left-out" value="左侧出">
+            <input type="button" id="right-out" value="右侧出">
+            <input type="button" id="btn-search" value="查询">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

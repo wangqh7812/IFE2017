@@ -5,91 +5,132 @@
     <title>基础JavaScript练习（一）</title>
 
     <style>
-        li {
-            list-style: none;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 960px;
+            height: 540px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .content-list {
             float: left;
+            width: 100%;
+            height: 20px;
+            margin-top: 10px;
+        }
+
+        .content-list li {
+            float: left;
+            list-style: none;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            margin-left: 10px;
+            padding: 0 10px;
             border: #000000 solid 1px;
+            box-sizing: border-box;
+        }
+
+        .input-btn {
+            float: left;
+            width: 100%;
+            height: 30px;
+            margin-top: 20px;
+        }
+
+        .input-btn label {
+            margin-left: 10px;
+        }
+
+        .control-btn {
+            float: left;
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .control-btn input {
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <div id="content" class="content">
-        <ul>
-            <li class="content-list">1</li>
-            <li class="content-list">2</li>
-            <li class="content-list">3</li>
-            <li class="content-list">4</li>
-            <li class="content-list">5</li>
+    <div class="wrapper">
+        <ul id="content" class="content-list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
         </ul>
-    </div>
-    <div class="input">
-        <label for="input-add">请开始你的表演</label>
-        <input type="text" name="input-add" id="input-add" placeholder="输入要添加进入队列的数字">
-    </div>
-    <div id="control" class="control">
-        <ul>
-            <li class="control-list"><input type="button" id="left-in" value="左侧入"></li>
-            <li class="control-list"><input type="button" id="right-in" value="右侧入"></li>
-            <li class="control-list"><input type="button" id="left-out" value="左侧出"></li>
-            <li class="control-list"><input type="button" id="right-out" value="右侧出"></li>
-        </ul>
+        <div class="input-btn">
+            <label for="input-text">
+                请开始你的表演: <input type="text" name="input-text" id="input-text" placeholder="输入要添加进入队列的数字">
+            </label>
+        </div>
+        <div id="control" class="control-btn">
+            <input type="button" id="left-in" value="左侧入">
+            <input type="button" id="right-in" value="右侧入">
+            <input type="button" id="left-out" value="左侧出">
+            <input type="button" id="right-out" value="右侧出">
+        </div>
     </div>
 
     <script type="text/javascript">
         window.onload = function () {
-            var leftIn = document.getElementById('left-in');
-            var rightIn = document.getElementById('right-in');
-            var leftOut = document.getElementById('left-out');
-            var rightOut = document.getElementById('right-out');
+            // var leftIn= document.getElementById("left-in");
+            // var rightIn = document.getElementById("right-in");
+            // var leftOut = document.getElementById("left-out");
+            // var rightOut = document.getElementById("right-out");
+            var contentList = document.getElementById("content");
+            var inputText = document.getElementById("input-text");
 
-            var inputValue = document.getElementById('input-add');
+            document.addEventListener("click",function (evt) {
+                console.log();
+                var ID = evt.target.id;
 
-            var oUl = document.getElementById('content').getElementsByTagName('ul')[0]; //疑问：如果不加[0]，那选出来的是这个数组？
-            var aLi = document.getElementsByClassName('content-list');
+                switch (ID) {
+                    case "left-in":
+                        if (check()) {
+                            contentList.innerHTML = ("<li>" + inputText.value + "</li>") + contentList.innerHTML;
+                        }
+                        else {
+                            alert("请输入符合要求的数字（0-99）！");
+                        }
+                        break;
 
-            var contentListLength = aLi.length;
-            
-            leftIn.onclick = function () {
-                var inputContent = Number(inputValue.value);
+                    case "right-in":
+                        if (check()) {
+                            contentList.innerHTML = contentList.innerHTML + ("<li>" + inputText.value + "</li>");
+                        }
+                        else {
+                            alert("请输入符合要求的数字（0-99）！");
+                        }
+                        break;
 
-                if (inputContent != "" && typeof(inputContent) == "number" && !isNaN(inputContent)) {
-                    var newLi = document.createElement('li');
-                    newLi.className = "content-list";
-                    newLi.innerHTML = inputContent; //疑问，为什么有波浪线
-                    oUl.insertBefore(newLi,oUl.childNodes[0]);
-                    inputValue.value = "";
-                } else if (isNaN(inputContent)) {
-                    alert("不可以输入其他内容哦~");
-                    inputValue.value = "";
-                } else if (inputContent == "") {
-                    alert("输入点啥数字吧~");
+                    case "left-out":
+                        contentList.children[0].remove();
+                        break;
+
+                    case "right-out":
+                        contentList.children[contentList.children.length - 1].remove();
+                        break;
+
+                    default:
+                        if (evt.target.tagName == "li" || evt.target.tagName == "LI") {
+                            evt.target.remove();
+                        }
                 }
-            };
+            });
             
-            rightIn.onclick = function () {
-
-                var inputContent = Number(inputValue.value);
-
-                if (inputContent != "" && typeof (inputContent) == "number" && !isNaN(inputContent)) {
-                    oUl.innerHTML += "<li class = 'content-list'>" + inputContent + "</li>";
-                    inputValue.value = "";
-                }else if (isNaN(inputContent)) {
-                    alert("不可以输入其他内容哦~");
-                    inputContent.value = "";
-                }else if (inputContent == "") {
-                    alert("输入点啥数字吧~");
-                } 
-            };
-
-            leftOut.onclick = function () {
-                alert(oUl.childNodes[0].innerText);
-                oUl.removeChild(oUl.childNodes[0]);
-            };
-
-            rightOut.onclick = function () {
-                alert(oUl.childNodes[contentListLength - 1].innerText);
-                oUl.removeChild(oUl.lastChild);
-            };
+            function check() {
+                return /^[0-9]{1,2}$/.test(inputText.value);
+            }
         }
     </script>
 </body>

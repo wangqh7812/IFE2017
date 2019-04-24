@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础JavaScript练习（二）</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 960px;
+            height: 540px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .content-list {
+            float: left;
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .content-list li {
+            list-style: none;
+            float: left;
+            width: 20px;
+            margin-left: 10px;
+            background-color: #aa0000;
+            border: #000000 solid 1px;
+            box-sizing: border-box;
+        }
+
+        .input-btn {
+            float: left;
+            width: 100%;
+            height: 30px;
+            margin-top: 20px;
+        }
+
+        .input-btn label {
+            margin-left: 10px;
+        }
+
+        .control-btn {
+            float: left;
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .control-btn input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul id="content" class="content-list">
+            <li style="margin-top: 30px; height: 70px" ></li>
+            <li style="margin-top: 10px; height: 90px" ></li>
+            <li style="margin-top: 44px; height: 56px" ></li>
+            <li style="margin-top: 35px; height: 65px" ></li>
+            <li style="margin-top: 10px; height: 90px" ></li>
+        </ul>
+        <div class="input-btn">
+            <label for="input-text">
+                请开始你的表演: <input type="text" name="input-text" id="input-text" placeholder="输入要添加进入队列的数字">
+            </label>
+        </div>
+        <div id="control" class="control-btn">
+            <input type="button" id="left-in" value="左侧入">
+            <input type="button" id="right-in" value="右侧入">
+            <input type="button" id="left-out" value="左侧出">
+            <input type="button" id="right-out" value="右侧出">
+            <input type="button" id="btn-sort" value="排序">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var inputText = document.getElementById("input-text");
+        var contentList = document.getElementById("content");
+
+        document.addEventListener("click", function (evt) {
+            var id = evt.target.id;
+            // console.log(contentList.children.length);
+
+            switch (id) {
+                case "left-in":
+                    if (check()) {
+                        if (contentList.children.length >= 60) {
+                            alert("长度超过60！");
+                            return; //return似乎要不要都可以啊
+                        }
+                        else {
+                            contentList.innerHTML = ("<li style='margin-top: " + (100 - inputText.value) + "px; height: " + inputText.value + "px;'></li>") + contentList.innerHTML;
+                        }
+                    }
+                    else {
+                        alert("请输入正确的数字（10-100）！");
+                    }
+                    break;
+
+                case "right-in":
+                    if (check()) {
+                        if (contentList.children.length >= 60) {
+                            alert("长度超过60！");
+                            return;
+                        }
+                        else{
+                            contentList.innerHTML = contentList.innerHTML + ("<li style='margin-top: " + (100 - inputText.value) + "px; height: " + inputText.value + "px;'></li>");
+                        }
+                    }
+                    else {
+                        alert("请输入正确的数字（10-100）！");
+                    }
+                    break;
+
+                case "left-out":
+                    contentList.children[0].remove();
+                    break;
+
+                case "right-out":
+                    contentList.children[contentList.children.length - 1].remove();
+                    break;
+                    
+                case "btn-sort":
+                    bubbleSort();
+                    break;
+
+                default:
+                    if (evt.target.tagName == "li" || evt.target.tagName == "LI") {
+                        evt.target.remove();
+                    }
+            }
+        });
+
+        function check() {
+            return /^[0-9]{1,3}$/.test(inputText.value) && (inputText.value >= 10) && (inputText.value <= 100);
+        }
+
+        //排序（冒泡）
+        function bubbleSort() {
+            var arr = contentList.children;
+            
+            for (var i = arr.length; i > 0; i--) {
+                for (var j = 0; j < i - 1; j++) {
+                    if (parseInt(arr[j].style.height) > parseInt((arr[j + 1].style.height))) {
+                        var now = arr[j],
+                            next = arr[j + 1];
+                            // temp;
+
+                        // temp = now;
+                        // now = next;
+                        // next = temp;
+
+                        var newItem = document.createElement("li");
+                        newItem.style.marginTop = now.style.marginTop;
+                        newItem.style.height = now.style.height;
+                        insertAfter(newItem, next);
+                        now.remove();
+                    }
+                }
+            }
+            // console.log(arr);
+        }
+
+        //执行插入
+        function insertAfter(newEl, targetEl) {
+            var parentEl = targetEl.parentNode; //获得目标节点的父节点
+
+            //如果父节点的最后一个孩子是目标节点，那么直接在父节点的最后插入新节点
+            if(parentEl.lastChild == targetEl) {
+                parentEl.appendChild(newEl);
+            }
+            //如果不是，那么就在目标节点之后一个节点之前插入新节点
+            else {
+                parentEl.insertBefore(newEl, targetEl.nextSibling);
+            }
+        }
+
+    </script>
+</body>
+</html>
