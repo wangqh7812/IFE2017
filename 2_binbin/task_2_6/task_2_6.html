@@ -36,6 +36,10 @@
             box-sizing: border-box;
         }
 
+        .active {
+            background-color: #aa0000 !important;
+        }
+
         .input-area {
             float: left;
             width: 100%;
@@ -50,7 +54,7 @@
             margin-top: 10px;
         }
 
-        .input-btn label {
+        .input-area label, .search-area label {
             margin-left: 10px;
         }
 
@@ -81,8 +85,8 @@
             </label>
         </div>
         <div class="search-area">
-            <label for="search">
-                输入要查询的字段：<input type="text" name="search-text" id="search" placeholder="查询字段">
+            <label for="search-text">
+                输入要查询的字段：<input type="text" name="search-text" id="search-text" placeholder="查询字段">
             </label>
         </div>
         <div id="control" class="control-btn">
@@ -95,7 +99,75 @@
     </div>
 
     <script type="text/javascript">
+        var contentList = document.getElementById("content");
+        var inputText = document.getElementById("input-text"),
+            searchText = document.getElementById("search-text");
 
+        //监听
+        document.addEventListener("click", function (evt) {
+            var ID = evt.target.id;
+
+            switch (ID) {
+                case "left-in":
+                    if (check()) {
+                        contentList.innerHTML = "<li>" + inputText.value + "</li>" + contentList.innerHTML;
+                    }
+                    else {
+                        alert("请输入合适的数字（0-99）！")
+                    }
+                    break;
+
+                case "right-in":
+                    if (check()) {
+                        contentList.innerHTML = contentList.innerHTML + "<li>" + inputText.value + "</li>";
+                    }
+                    else {
+                        alert("请输入合适的数字（0-99）！")
+                    }
+                    break;
+
+                case "left-out":
+                    contentList.children[0].remove();
+                    break;
+
+                case "right-out":
+                    contentList.children[contentList.children.length - 1].remove();
+                    break;
+
+                case  "btn-search":
+                    //不用检查了，有就有，没有就没有；
+                    searchFn();
+                    break;
+
+                default:
+                    if (evt.target.tagName == "li" || evt.target.tagName == "LI") {
+                        evt.target.remove();
+                    }
+            }
+        });
+
+        //检查输入的是否有问题
+        function check() {
+            return /^[0-9]{1,2}$/.test(inputText.value);
+        }
+
+        //搜索
+        function searchFn() {
+            var searchItems = contentList.getElementsByTagName("li");
+            for (var i = 0; i < searchItems.length; i++) {
+                searchItems[i].className = searchItems[i].className.replace("active", "");
+            }
+            for (var j = 0; j < searchItems.length; j++) {
+                if (searchItems[j].innerText.indexOf(searchText.value) >= 0) {
+                    markFn(searchItems[j]);
+                } 
+            }
+        }
+        
+        //标记
+        function markFn(e) {
+            e.className = "active";
+        }
     </script>
 </body>
 </html>
