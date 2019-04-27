@@ -87,14 +87,23 @@
 
     <script type="text/javascript">
         window.onload = function () {
+            var resultArr = [];
+            var rootNode = document.getElementById("bt");
             //前序
-            function preOrderTraversal(node, arr) {
+            function preOrderTraversal(node) {
                 if (node != null) {
-                    arr.push(node);
-                    preOrderTraversal(node.firstElementChild, arr);
-                    preOrderTraversal(node.lastElementChild. arr);
+                    resultArr.push(node);
+                    // console.log(node);.
+
+                    preOrderTraversal(node.left);
+                    preOrderTraversal(node.right);
                 }
+                return resultArr;
             }
+
+            preOrderTraversal(rootNode);
+
+            console.log(resultArr);
 
             //中序
             function inOrderTraversal(node, arr) {
@@ -114,26 +123,26 @@
                 }
             }
 
-            //动画
-            var timer = null;
-
-            function traversalAnimation(a) {
-                var index = 0;
-                if (a.length > 0) {
-                    if (timer) {
-                        clearInterval(timer);
-                    }
-                    else {
-                        timer = setInterval(function () {
-                            for (var i = 0; i < arr.length; i++) {
-                                a[i].className = a[i].className.replace("active", "");
-                            }
-                            a[index].className = "active";
-                            index++;
-                        },500)
-                    }
-                }
-            }
+            // //动画
+            // var timer = null;
+            //
+            // function traversalAnimation(a) {
+            //     var index = 0;
+            //     if (a.length > 0) {
+            //         if (timer) {
+            //             clearInterval(timer);
+            //         }
+            //         else {
+            //             timer = setInterval(function () {
+            //                 for (var i = 0; i < arr.length; i++) {
+            //                     a[i].className = a[i].className.replace("active", "");
+            //                 }
+            //                 a[index].className = "active";
+            //                 index++;
+            //             },500)
+            //         }
+            //     }
+            // }
 
         }
     </script>
